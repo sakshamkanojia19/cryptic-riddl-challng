@@ -1,0 +1,9 @@
+[
+  {
+    "decrypted_text": "Hello World",
+    "email": "sakshamkanojia2002@gmail.com",
+    "phone_number": "9310277188",
+    "name": "Saksham Kanojia",
+    "user_submitted_code": "function decryptText(encryptedText, key) {\r\n  let decrypted = '';\r\n  const shift = parseInt(key);\r\n\r\n  for (let i = 0; i < encryptedText.length; i++) {\r\n    const char = encryptedText[i];\r\n\r\n    if (char.match(/[A-Z]/)) {\r\n      decrypted += String.fromCharCode(((char.charCodeAt(0) - 65 - shift + 26) % 26) + 65);\r\n    } else if (char.match(/[a-z]/)) {\r\n      decrypted += String.fromCharCode(((char.charCodeAt(0) - 97 - shift + 26) % 26) + 97);\r\n    } else {\r\n      decrypted += char;\r\n    }\r\n  }\r\n\r\n  return decrypted;\r\n}"
+  }
+]
